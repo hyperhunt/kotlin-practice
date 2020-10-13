@@ -6,7 +6,7 @@ fun main() {
     println("Kotlin example: ${userKotlin.email}")
 
     // Array
-    val items: Array<Int> = arrayOf(5,7,12,4,0,13)
+//    val items: Array<Int> = arrayOf(5,7,12,4,0,13)
 //    val someArray = arrayOf("String")
 
 //    println(items.set(0, 45))
@@ -18,9 +18,21 @@ fun main() {
 //        print("${el}: ")
 //    }
 
-    items.forEach {
-        print(it)
+//    items.forEach {
+//        print(it)
+//    }
+//    println("")
+//    items.forEachIndexed {index, el -> print ("${index}: $el ")}
+
+//    val items = listOf(5,7,12,4,0,13)
+    val items: MutableList<Int> = mutableListOf(5, 7, 12, 4, 0, 13)
+
+
+    println(items.last())
+    println(items.indexOf(13)) // Find 5 in first position [0]
+
+    val user = mapOf("name" to "Tony", "age" to 42, "isHasCar" to true).also {
+        println(it)
     }
-    println("")
-    items.forEachIndexed {index, el -> print ("${index}: $el ")}
+    user.forEach { (key, value) -> println("$key -> $value")}
 }
