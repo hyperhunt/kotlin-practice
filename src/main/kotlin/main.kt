@@ -44,3 +44,16 @@
 //        println(it)
 //    }
 //}
+
+fun fnSomething(vararg word: Any) {
+    var i = 0
+    word.forEach { el -> print("${++i}-$el ") }
+    println("")
+}
+fun main() {
+    val names = arrayOf("Tony", "Hyper", "Hunt")
+    fnSomething()
+    fnSomething("Hello")
+    fnSomething("Hello", "Tony")
+    fnSomething("Hello", "Tony", 42, *names)
+}
