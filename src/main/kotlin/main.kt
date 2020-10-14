@@ -58,6 +58,12 @@
 //    fnSomething("Hello", "Tony", 42, *names)
 //}
 
+enum class  Animals {
+    DOG, CAT, BEAR, LION;
+
+    fun toLowerCase() = name.toLowerCase().capitalize()
+}
+
 fun main() {
 //    var items = 5
 //    while (items > 0) { println(items--) }
@@ -79,18 +85,44 @@ fun main() {
 //    println("${tony.firstName} ${tony.secondName}")
 //    tony.printUser()
 
-    val tony = User("Tony", "Hyper")
-    tony.firstName = "First"
-    tony.secondName = "Second"
-//    tony.printUser()
-    tony.login = "tnx"
-    tony.login = "Psx"
-    println(tony.login)
-    tony.login
+//    val tony = User("Tony", "Hyper")
+//    tony.firstName = "First"
+//    tony.secondName = "Second"
+////    tony.printUser()
+//    tony.login = "tnx"
+//    tony.login = "Psx"
+//    println(tony.login)
+//    tony.login
 
 //    var peter = User()
 //    peter.printUser()
 //    var bob = User("Bob")
 //    bob.printUser()
 //    tony.printUser("HO", "NU")
+
+//    user.printProvider(User())
+//    println(user.getConnection())
+//    val user = NewKotlinClass()
+    val user = object : MainUserProvider() {
+        override fun printProvider(user: User) {
+            super.printProvider(user)
+            println("Text of printProvider()")
+        }
+    }
+    checkDataTypes(user)
+
+    when(Animals.BEAR) {
+        Animals.CAT -> println(Animals.CAT.toLowerCase())
+        Animals.DOG -> println(Animals.DOG.toLowerCase())
+        Animals.LION -> println(Animals.LION.toLowerCase())
+        Animals.BEAR -> println(Animals.BEAR.toLowerCase())
+    }
+}
+
+fun checkDataTypes(obj: UserInfoProvider) {
+    obj.printProvider(User())
+
+    if (obj is DbConnection) {
+        println(obj.getConnection())
+    }
 }

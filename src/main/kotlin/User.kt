@@ -12,9 +12,9 @@ class User (var firstName: String = "Peter", var secondName: String = "Patrik") 
             return "get(): $field"
         }
 
-//    fun printUser() {
-//        println("$firstName $secondName")
-//    }
+    fun printUser() {
+        println("$firstName $secondName")
+    }
 }
 
 //class User(_firstName: String, _secondName: String) {
