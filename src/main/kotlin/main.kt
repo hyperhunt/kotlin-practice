@@ -45,15 +45,30 @@
 //    }
 //}
 
-fun fnSomething(vararg word: Any) {
-    var i = 0
-    word.forEach { el -> print("${++i}-$el ") }
-    println("")
-}
+//fun fnSomething(vararg word: Any) {
+//    var i = 0
+//    word.forEach { el -> print("${++i}-$el ") }
+//    println("")
+//}
+//fun main() {
+//    val names = arrayOf("Tony", "Hyper", "Hunt")
+//    fnSomething()
+//    fnSomething("Hello")
+//    fnSomething("Hello", "Tony")
+//    fnSomething("Hello", "Tony", 42, *names)
+//}
+
 fun main() {
-    val names = arrayOf("Tony", "Hyper", "Hunt")
-    fnSomething()
-    fnSomething("Hello")
-    fnSomething("Hello", "Tony")
-    fnSomething("Hello", "Tony", 42, *names)
+//    var items = 5
+//    while (items > 0) { println(items--) }
+//    do {
+//        println(items)
+//    } while (items == 5)
+
+//    for (i in 1..10 step 2) { println(i) }
+//    for (i in 10 downTo 1 step 3) { println(i) }
+//    for (el in 'a'..'z') { print("$el ") }
+
+//    val x = 20
+//    if (x in 5..50) { println("Variable: $x") }
 }
