@@ -71,4 +71,26 @@ fun main() {
 
 //    val x = 20
 //    if (x in 5..50) { println("Variable: $x") }
+
+    // OOP Class
+//    val tony = User()
+//    tony.firstName = "Tony"
+//    tony.secondName = "Hunt"
+//    println("${tony.firstName} ${tony.secondName}")
+//    tony.printUser()
+
+    val tony = User("Tony", "Hyper")
+    tony.firstName = "First"
+    tony.secondName = "Second"
+//    tony.printUser()
+    tony.login = "tnx"
+    tony.login = "Psx"
+    println(tony.login)
+    tony.login
+
+//    var peter = User()
+//    peter.printUser()
+//    var bob = User("Bob")
+//    bob.printUser()
+//    tony.printUser("HO", "NU")
 }
