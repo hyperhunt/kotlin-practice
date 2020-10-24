@@ -1,6 +1,6 @@
 fun main() {
-//    val str = "Hello, how are you?"
-//    val subStr = str.substring(0 until str.indexOf(","))
+//    val getStr = "Hello, how are you?"
+//    val subStr = getStr.substring(0 until getStr.indexOf(","))
 //    println(subStr)
 
     val text = "Taernyl's Fully"
