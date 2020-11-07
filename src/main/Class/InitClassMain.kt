@@ -5,8 +5,8 @@ class InitClass(
 //    _healthPoint: Int ,
 //    _isBlessed: Boolean ,
 //    _isImmortal: Boolean ,
-    var healthPoint: Int = 111 ,
-    val isBlessed: Boolean ,
+    private var healthPoint: Int = 111 ,
+    private val isBlessed: Boolean ,
     private val isImmortal: Boolean ,
 ) {
     var name = _name
@@ -29,15 +29,24 @@ class InitClass(
         }
     }
 
+    /*
+    * Код выполнится только один раз, при первом обращении к делегированному свойству в методе чтения свойства name.
+    * Все дальнейшие обращения к этому свойству будут использовать ранее полученный результат вместо повторных вычислений.
+    * Отложенная инициализация полезна, но она слишком многословна, поэтому используйте ее только тогда, когда требуются сложные вычисления.
+    * */
+    private val printTown by lazy { selectHomeTown() } // Отложенная инициализация
+
     init {
         println("Hello World!")
         require(healthPoint > 0) { "healthPoints must be greater than zero." }
         require(name.isNotBlank()) { "Player must have a name." }
+        println(printTown)
     }
 
     private val homeTown: String = selectHomeTown()
     private fun selectHomeTown(): String =
         arrayListOf("A1" , "B2" , "C3" , "GQ3" , "FB3" , "EC3" , "ARA4" , "BAB4").shuffled().first().toString()
+
 }
 
 fun main() {
@@ -51,6 +60,6 @@ fun main() {
 
 //    println("${init.toString()}: ${init.name.toString()}, ${init.healthPoint.toString()}, ${init.isBlessed.toString()}.")
 //    println(init.homeTown)
-    println(init.name) // anme of homeTown random
+    println(init.name) // name of homeTown random
 
 }
