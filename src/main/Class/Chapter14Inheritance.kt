@@ -1,6 +1,7 @@
 //import java.lang.IllegalArgumentException
 
-open class Inheritance(val name: String) {
+open class Inheritance(var name: String) {
+
     //    protected open val dangerLevel = 5
     open val dangerLevel = 5
     fun description() = "Room: $name, Level: $dangerLevel"
@@ -11,6 +12,10 @@ open class Inheritance(val name: String) {
 //    }
     open fun inheritA() {
         println("fun of inheritA()")
+    }
+
+    override fun toString(): String {
+        return "#: " + super.toString()
     }
 }
 
@@ -44,11 +49,13 @@ open class InheritanceB : TownSquare() {
 }
 
 fun main() {
+
     val currentRoom = Inheritance("Foyer")
     println(currentRoom.name)
     println(currentRoom.description())
     println(currentRoom.load())
     currentRoom.inheritA()
+    currentRoom.toString()
 
     println(" ")
 
@@ -82,4 +89,7 @@ fun main() {
 //        else -> throw IllegalArgumentException()
 //    }
 //    println(className)
+
+//    Super class Any
+//    println(currentRoom is Any)
 }
