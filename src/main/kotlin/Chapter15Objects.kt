@@ -8,11 +8,15 @@
 // Anonymous object
 // Companion object
 
-class Sword {
+open class Sword {
+
     companion object {
+        private var nextid = 0
         fun hello() {
-            println("Sword")
+            println("Sword: $nextid")
+            nextid++
         }
+
     }
 }
 
@@ -29,10 +33,12 @@ object Game {
             println("$i: $cmd")
             i++
         }
+
     }
 }
 
 fun main() {
-    Game.play()
     Sword.hello()
+//    Game.play()
+//    Sword.hello()
 }
