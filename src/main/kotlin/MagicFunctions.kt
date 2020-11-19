@@ -1,19 +1,19 @@
 fun main() {
 
-    /* map */
+    /** map */
 
 //    val array = arrayOf(1 , 2 , 3 , 4 , 5)
 //    var result = array.map { v -> "integer: $v" }
 //    println(result.joinToString(", " , "#" , "@" , -1 , "..."))
 
-    /* flatMap */
+    /** flatMap */
 
     // 0, 1, 0, 1, 2, 0, 1, 2, 3, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 5
 //    val result = array.map { 0..it }.flatten().joinToString(", ")
 //    val result = array.flatMap { 0..it }.joinToString(", ")
 //    println(result)
 
-    /* fold */
+    /** fold */
 
     // поиски минимум, максимум, обход коллекций
 //
@@ -24,14 +24,18 @@ fun main() {
 //        max(acc , i) }
 //    println(result)
 
-    /* filter */
+    /** filter */
 
 //    val array = arrayOf(1 , 2 , 3 , 4 , 5 , 0 , -100 , 1024 , 100)
 //    val result = array.filter { abs(it) < 101 }
 //    val result = array.filter { abs(it) in 3..101 }
 //    println(result.joinToString(", "))
 
-    val input = "Kotlin functions Kotlin are first-class, which means that they can be stored in variables and data structures, passsed as argument."
+    /**
+    * Пример реализации в старом стиле, без функций высшего порядка.
+    * */
+
+    /*val input = "Kotlin functions Kotlin are first-class, which means that they can be stored in variables and data structures, passsed as argument."
 
     val words = mutableListOf<String>()
     var currentWord = ""
@@ -85,5 +89,10 @@ fun main() {
 
     println("---")
     println(words.joinToString(", "))
-    println(shortTestWords.joinToString(", "))
+    println(shortTestWords.joinToString(", "))*/
+
+    /** Пример реализации с функциями высшего порядка */
+
+    val input = "Kotlin functions Kotlin are first-class"
+
 }
