@@ -2,6 +2,15 @@ import java.util.*
 
 fun main() {
 
+//    println("Start...")
+//    val a = readLine()!!.toInt()
+//    val b = readLine()!!.toFloat()
+//    val c = readLine()!!
+//
+//    println(a)
+//    println(b)
+//    println(c)
+
 //    val a: Byte = 100              //1
 //    val b: Byte = 127             //2
 //    val c: Byte = (100 + 100).toByte()        //3
