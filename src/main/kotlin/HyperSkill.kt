@@ -1,7 +1,24 @@
-import java.util.Scanner
-import kotlin.math.sign
-
 fun main(args: Array<String>) {
+    count7("7177")
+}
+
+private fun count7(number: String): Int {
+    val j = 0
+    var counter = 0
+    val strNumber = number.toString()
+    val i = strNumber.length
+    if(j == i) {
+        return counter
+    }
+    if(strNumber.substring(0 , 1) == "7") {
+        println(strNumber.substring(0 , 1))
+        counter++
+    }
+    val recur = count7(strNumber.substring(j + 1 , i))
+    return counter + recur
+}
+
+/*fun main(args: Array<String>) {
 //    println("Start...")
 
     while (true) {
@@ -33,7 +50,7 @@ fun main(args: Array<String>) {
 //        println("u: $unique")
 //        println("...")
     }
-}
+}*/
 /*
         fun eq(value: String , data: List<String>): Int {
             var uniq: Int = 0
