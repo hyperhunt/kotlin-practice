@@ -1,4 +1,34 @@
 fun main() {
+
+}
+
+/*fun main() {
+    val name = listOf<String>("Tony" , "Hyper" , "Harper" , "Ant" , "Julia").filter { it.startsWith("A") }
+    println(name)
+
+//    for (i in 'A'..'Z') {
+//        print("$i ")
+//    }
+
+//    val colNumber =  (0..10).toList()
+//    val dubledNumbers = colNumber.map { it * 2 }
+//    println(dubledNumbers)
+    val colNumber = (0..10).toList()
+    val dubledNumbers: List<String> = colNumber.map { "Employee: $it" }
+    for (i in dubledNumbers) print("$i ")
+}*/
+
+/*fun main() {
+    val listOfNumbers = mutableListOf<Int>()
+    for (i in 0..10) {
+        listOfNumbers.add(i)
+    }
+    val listOfEvnNumbers = listOfNumbers.filter { it % 2 == 0 }
+    println(listOfEvnNumbers)
+}*/
+
+
+/*fun main() {
     val sorting: (Array<Int>) -> Array<Int> = {
         for (i in it.size - 2 downTo 0) {
             for (y in 0..i) {
@@ -16,7 +46,7 @@ fun main() {
     for (i in sortedArray) {
         print("$i ")
     }
-}
+}*/
 
 /*fun main(args: Array<String>) {
     count7("7177")
