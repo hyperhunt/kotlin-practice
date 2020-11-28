@@ -1,4 +1,24 @@
-fun main(args: Array<String>) {
+fun main() {
+    val sorting: (Array<Int>) -> Array<Int> = {
+        for (i in it.size - 2 downTo 0) {
+            for (y in 0..i) {
+                if(it[y] < it[y + 1]) {
+                    val temp = it[y]
+                    it[y] = it[y + 1]
+                    it[y + 1] = temp
+                }
+            }
+        }
+        it
+    }
+
+    val sortedArray: Array<Int> = sorting(arrayOf(184, 3, -1, 21, 424, 5, 7, 42, 13))
+    for (i in sortedArray) {
+        print("$i ")
+    }
+}
+
+/*fun main(args: Array<String>) {
     count7("7177")
 }
 
@@ -16,7 +36,7 @@ private fun count7(number: String): Int {
     }
     val recur = count7(strNumber.substring(j + 1 , i))
     return counter + recur
-}
+}*/
 
 /*fun main(args: Array<String>) {
 //    println("Start...")
