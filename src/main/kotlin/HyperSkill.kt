@@ -1,10 +1,11 @@
-fun main() {
 
-    /*
+/*fun main() {
+
+    *//*
     take
     drop
     generateSequence
-    */
+    *//*
 
 //    val num = (10..20).toList().take(3) // take() takeLast()
 //    val num = (10..20).toList().dropLast(3) // drop() dropLast()
@@ -31,7 +32,7 @@ fun main() {
     for (i in empl) {
         println("$i")
     }
-}
+}*/
 
 /*fun main() {
     val name = listOf<String>("Tony" , "Hyper" , "Harper" , "Ant" , "Julia").filter { it.startsWith("A") }
