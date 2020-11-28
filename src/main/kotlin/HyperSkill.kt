@@ -1,5 +1,27 @@
 fun main() {
 
+    /*
+    take
+    drop
+    generateSequence
+    */
+
+//    val num = (10..20).toList().take(3) // take() takeLast()
+//    val num = (10..20).toList().dropLast(3) // drop() dropLast()
+//    print(num)
+
+//    val arr: Sequence<Int> = generateSequence(0, { it + 2 }).take(1000) // Ленивая инициализация, применяется когда инициализируется.
+//    for (i in arr) println("$i ")
+
+//    val arr: Sequence<Char> = generateSequence('A') { it + 1 }
+//    arr.forEach { i ->
+//        println("$i ")
+//    }
+
+    val arr: Sequence<Int> = generateSequence {
+        (Math.random() * 100).toInt()
+    }.take(20)
+    for (i in arr) println("$i")
 }
 
 /*fun main() {
