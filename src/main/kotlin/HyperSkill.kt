@@ -22,6 +22,15 @@ fun main() {
         (Math.random() * 100).toInt()
     }.take(20)
     for (i in arr) println("$i")
+
+    val empl: Sequence<String> = generateSequence("Employees # 1") {
+        val index = it.substring(12).toInt()
+        "Employees # ${index + 1}"
+    }.take(10)
+
+    for (i in empl) {
+        println("$i")
+    }
 }
 
 /*fun main() {
