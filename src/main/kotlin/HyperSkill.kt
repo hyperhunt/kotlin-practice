@@ -1,5 +1,3 @@
-
-
 fun main() {
     /*
     zip
@@ -14,18 +12,30 @@ fun main() {
 //    phones.forEach { println(it) }
 
 
-    val numberGeneric: Sequence<String> = generateSequence { (Math.random() * 100).toString().takeLast(10) }.take(1)
-    val phoneTemplate: Sequence<String> = numberGeneric.map {
+    val names = mutableListOf<String>()
+    val numberGeneric: Sequence<String> = generateSequence { (Math.random() * 100).toString().takeLast(10) }
+    val phoneTemplate: MutableList<String> = numberGeneric.map {
 //        println(it)
         val p1 = it.substring(0 , 3)
         val p2 = it.substring(3 , 6)
         val p3 = it.substring(6 , 8)
         val p4 = it.substring(8 , 10)
         val phone = "+7 ($p1) $p2-$p3-$p4"
+        names.add("ID: $p1")
         phone
-    }
+    }.take(10).toMutableList()
 
-    for (i in phoneTemplate) println(i)
+//    for (i in phoneTemplate) println(i)
+//    for (i in names) println(i)
+
+//    val names: MutableList<String> = mutableListOf<String>()
+//    names.add("Tony")
+//    names.add("Mark")
+//    names.add("Hopkins")
+//    names.forEach { println(it) }
+
+    val users = names.zip(phoneTemplate)
+    for (i in users) println(i)
 }
 
 //        println(it)
