@@ -1,4 +1,47 @@
 fun main() {
+    val data: Map<String, List<Int>> = mapOf(
+        "file1" to listOf(105,103,0,400,1,5),
+        "file2" to listOf(15,-10,3,4,1,5),
+        "file3" to listOf(15,211,3,4,1,51),
+    )
+//    data.put("file1", listOf(15,10,3,4,1,5))
+//    data["file1"] = listOf(15,10,3,4,1,5)
+//    data.put("file1", listOf(15,10,3,4,1,5))
+
+    val average1 = data.flatMap { it.value }.average()
+    println(average1)
+    val average2 = data.filter { it.value.all { it > 0 } }.flatMap { it.value }.average()
+    println(average2)
+}
+
+/*fun main() {
+
+    *//*
+    Среднее значение average()
+    flatMap
+    flatten()
+    *//*
+
+    val revenueByWeek = listOf(
+        listOf(8,6,5,1,2),
+        listOf(7,2,2,1,4),
+        listOf(1,4,3,2,1),
+    )
+
+//    val total = mutableListOf<Int>()
+//    revenueByWeek.map {
+//        for (i in it) {
+//            total.add(i)
+//        }
+//    }
+
+    var total = revenueByWeek.flatMap { it }
+
+    val average = total.average()
+    println(average)
+}*/
+
+/*fun main() {
     /*
     zip
     */
@@ -37,7 +80,7 @@ fun main() {
     val users = names.zip(phoneTemplate)
     for (i in users) println(i)
 }
-
+*/
 //        println(it)
 //        val regexTemplate: String? = Regex(pattern = """\d{3}-\d{3}\d{2}\d{2}""").find(input = it)?.value
 
