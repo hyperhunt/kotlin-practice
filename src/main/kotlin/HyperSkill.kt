@@ -1,4 +1,60 @@
 
+
+fun main() {
+    /*
+    zip
+    */
+
+//    println("${(Math.random() * 1_000_000_000).toLong()}")
+//
+//    val phones = mutableListOf<Long>()
+//    for (i in 0..10) {
+//        phones.add(79_000_000_000 + (Math.random() * 1_000_000_000).toLong())
+//    }
+//    phones.forEach { println(it) }
+
+
+    val numberGeneric: Sequence<String> = generateSequence { (Math.random() * 100).toString().takeLast(10) }.take(1)
+    val phoneTemplate: Sequence<String> = numberGeneric.map {
+//        println(it)
+        val p1 = it.substring(0 , 3)
+        val p2 = it.substring(3 , 6)
+        val p3 = it.substring(6 , 8)
+        val p4 = it.substring(8 , 10)
+        val phone = "+7 ($p1) $p2-$p3-$p4"
+        phone
+    }
+
+    for (i in phoneTemplate) println(i)
+}
+
+//        println(it)
+//        val regexTemplate: String? = Regex(pattern = """\d{3}-\d{3}\d{2}\d{2}""").find(input = it)?.value
+
+//        val matchedResults = Regex(pattern = """\d{3}-\d{3}\d{2}\d{2}""").findAll(input = it)
+//        val result = StringBuilder()
+//        for (matchedText in matchedResults) {
+//            result.append(matchedText.value + " ")
+//        }
+
+//        regexTemplate
+//        result.toString()
+//    }
+
+
+
+
+
+    /* for (i in numberGeneric.take(10)) {
+         println(i)
+     }*/
+//    val arr: Sequence<Char> = generateSequence('A') { it + 1 }
+
+//    val str ="12+20*/2+(-4)"
+//    val arr ="(?<!\\d)-?[^\\p{Punct}]+".toRegex().findAll(str).map{ it.value }.toList()
+//    println(arr)
+
+
 /*fun main() {
 
     *//*
