@@ -1,4 +1,20 @@
-class HyperSkill(val country: String = "", val population: Long = 0) {
+data class HyperSkill(val city: String = "" , val street: String = "" , val numberOfHouse: Int = 0)
+
+fun main() {
+    val adress1 = HyperSkill("Moscow", "Green", 42)
+    val adress2 = HyperSkill("Moscow", "Green", 42)
+
+    println("$adress1")
+    println("$adress2")
+
+    if(adress1 === adress2) {
+        println("Equals")
+    } else {
+        println("Not Equals")
+    }
+}
+
+/*class HyperSkill(val country: String = "", val population: Long = 0) {
 //    constructor() : this("" , 0)
 }
 
@@ -13,7 +29,7 @@ fun main() {
 
 fun mutString(str: String , mut: (String) -> String): String {
     return mut(str)
-}
+}*/
 
 /*fun main() {
     val listOfNumbers: MutableList<Int> = arrayListOf<Int>(42,1,0,2020)
