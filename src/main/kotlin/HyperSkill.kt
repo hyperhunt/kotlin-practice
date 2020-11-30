@@ -1,4 +1,21 @@
-fun main() {
+import java.util.ArrayList
+
+/*fun main() {
+    val listOfNumbers: MutableList<Int> = arrayListOf<Int>(42,1,0,2020)
+    println(listOfNumbers)
+    val lOn: MutableList<Int> = listOf<Int>(4,1,0,13).toMutableList()
+    println(lOn[0])
+}*/
+
+/*fun main() {
+    var name: String? = null
+    name = "sasdasd"
+    if(name?.length!! > 5) {
+        println("Result: $name")
+    }
+}*/
+
+/*fun main() {
     val data: Map<String, List<Int>> = mapOf(
         "file1" to listOf(105,103,0,400,1,5),
         "file2" to listOf(15,-10,3,4,1,5),
@@ -12,7 +29,7 @@ fun main() {
     println(average1)
     val average2 = data.filter { it.value.all { it > 0 } }.flatMap { it.value }.average()
     println(average2)
-}
+}*/
 
 /*fun main() {
 
