@@ -1,4 +1,19 @@
-import java.util.ArrayList
+class HyperSkill(val country: String = "", val population: Long = 0) {
+//    constructor() : this("" , 0)
+}
+
+fun main() {
+    val value = mutString("Hello") { it.toUpperCase() }
+    println(value)
+
+    val country = HyperSkill("Russia", 100_000_000)
+//    val country = HyperSkill("Russia")
+    println(country.population)
+}
+
+fun mutString(str: String , mut: (String) -> String): String {
+    return mut(str)
+}
 
 /*fun main() {
     val listOfNumbers: MutableList<Int> = arrayListOf<Int>(42,1,0,2020)
@@ -112,12 +127,9 @@ import java.util.ArrayList
 //    }
 
 
-
-
-
-    /* for (i in numberGeneric.take(10)) {
-         println(i)
-     }*/
+/* for (i in numberGeneric.take(10)) {
+     println(i)
+ }*/
 //    val arr: Sequence<Char> = generateSequence('A') { it + 1 }
 
 //    val str ="12+20*/2+(-4)"
